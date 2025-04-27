@@ -6,10 +6,7 @@ export default function CustomNotFoundPage() {
   return (
     <View style={styles.container}>
       <Text>CustomNotFoundPage</Text>
-      <Link href="/">
-        There is nothing wrong with your app, it's just that it is a custom 404
-        page
-      </Link>
+      <Link href="/">Go to Home</Link>
     </View>
   );
 }

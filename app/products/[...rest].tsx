@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Link } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 
-export default function CustomNotFoundPage() {
+export default function CatchAllProductDetails() {
+  const { rest } = useLocalSearchParams<{ rest: string[] }>();
   return (
     <View style={styles.container}>
-      <Text>CustomNotFoundPage</Text>
-      <Link href="/">
-        There is nothing wrong with your app, it's just that it is a custom 404
-        page
-      </Link>
+      <Text>Catch all Product Details </Text>
+      <Text>{rest.join("/")} </Text>
     </View>
   );
 }
